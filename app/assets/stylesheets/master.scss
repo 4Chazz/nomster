@@ -1,3 +1,4 @@
+
 @import "bootstrap";
 
 .booyah-box {
@@ -25,4 +26,11 @@ body {
 .navbar{
   background: image_url('cartographer.png');
   box-shadow: 0px 1px 3px #2a2a2a;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #FC681E;
+  font-family: 'ralewayregular', serif;
+  font-size: 26px;
+  letter-spacing: -0.3px;
 }
