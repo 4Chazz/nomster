@@ -3,7 +3,10 @@
     <h1><%= place.name %></h1>
     <i><%= place.address %></i><br />
     <p><%= place.description %></p><br />
+        <%= render @places %>
   </div>
 
 
 <% end %>
+<%= paginate @places %>
+#<%= page_entries_info @places %>
