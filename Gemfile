@@ -62,3 +62,6 @@ gem 'simple_form'
 
 #Add font awesome icons
 gem "font-awesome-rails"
+
+#Add Devise gem
+gem 'devise'
