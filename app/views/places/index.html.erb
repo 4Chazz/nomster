@@ -7,15 +7,11 @@
     <% if place.user.present? %>
       <small><%= place.user.email %></small>
     <% end %>
-    
+  
   </div>
-
-
 <% end %>
 
 <div class="pagination col-10 offset-5">
   <%= paginate @places %>
   
 </div>
-
-
