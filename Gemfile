@@ -65,3 +65,9 @@ gem "font-awesome-rails"
 
 #Add Devise gem
 gem 'devise'
+
+#Add Geocode Gem
+gem "geocoder"
+
+#Add Figaro to add environment variable 
+gem "figaro"
