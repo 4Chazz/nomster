@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   resources :places do
     resources :comments, only: :create
   end
+  root 'user#index'
   resources :user do
-    resources :contacts, only: :create
+    resources :"contacts", only: [:new, :create]
   end
 end
