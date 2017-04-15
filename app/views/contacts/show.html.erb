@@ -1,0 +1,7 @@
+<div class="clear"></div>
+<%= simple_form_for @contacts, url: '#' do |f| %>
+  <%= f.input :name %>
+  <%= f.input :email %>
+  <%= f.input :message %>
+  <%= f.submit "Send It", class: 'btn btn-primary' %>
+<% end %>

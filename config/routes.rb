@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+ 
   root 'places#index'
   resources :places do
     resources :comments, only: :create
   end
-  root 'user#index'
-  resources :user do
-    resources :"contacts", only: [:new, :create]
+
+  root 'contacts#index'
+  #get '/contacts' => 'contacts#index'
+  resources :contacts
+  
   end
-end
+  

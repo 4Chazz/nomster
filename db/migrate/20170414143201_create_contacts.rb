@@ -4,11 +4,10 @@ class CreateContacts < ActiveRecord::Migration[5.0]
       t.text :name
       t.string :email
       t.text :message
-      t.integer :user_id
-
+      t.integer :user
       t.timestamps
     end
 
-    add_index :contacts, :user_id
+    add_index :contacts, :user
   end
 end
