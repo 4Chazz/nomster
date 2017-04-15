@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :places do
     resources :comments, only: :create
   end
+  resources :user do
+    resources :contacts, only: :create
+  end
 end

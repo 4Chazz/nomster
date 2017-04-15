@@ -14,12 +14,11 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button> 
-      <a class="navbar-brand" href="#">Nomster</a> -->
-      <%= link_to 'Nomster', root_path, class: 'navbar-brand' %>
+      
 
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <%= link_to 'Nomster', root_path, class: 'navbar-brand' %>
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-          <li class="nav-item active">
+        <li class="nav-item">
             <%= link_to new_place_path, class: 'nav-link' do %>
             <i class="fa fa-plus-circle"></i>
             New Place
@@ -45,6 +44,10 @@
         </ul>  
 
       </div>
+    </nav>
+
+
+    <!--<div class="collapse navbar-collapse" id="navbarTogglerDemo02">-->
 
     <!--<div class="navbar-nav"> -->
       <!-- Button trigger modal -->
@@ -52,7 +55,7 @@
         Contact Us
       </button>
 
-      <!-- Modal -->
+      <!-- Modal 
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -71,17 +74,23 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
 
 
 
 
+    <% if notice.present? %>
+        <p class="alert alert-info"><%= notice %></p>
+    <% end %>
+    <% if alert.present? %>
+        <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
 
 
 
 
-    </nav>
+ 
 
     
 
@@ -92,10 +101,4 @@
 </html>
 
 
-<% if notice.present? %>
-        <p class="alert alert-info"><%= notice %></p>
-    <% end %>
-    <% if alert.present? %>
-        <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
 
