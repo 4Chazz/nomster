@@ -9,7 +9,8 @@ Rails.application.routes.draw do
 
   root 'contacts#index'
   #get '/contacts' => 'contacts#index'
-  resources :contacts
-  
+  resources :contacts do
+  end
+
   end
   
