@@ -1,19 +1,21 @@
 class ContactsController < ApplicationController
+  before_action :authenticate_user!, only:[:new, :create]
 
   def index
-    @contacts = Contacts.all
+    @contacts = Contact.all
   end
 
   def show
-    @contacts = Contacts.new
+    @contacts = Contact.new
   end
 
   def new
-    @contact=Contacts.new
+    @contact=Contact.new
   end
 
   def create
-    Contacts.create(contact_params)
+    current_user.contacts.create(contact_params)
+    Contact.create(contact_params)
     redirect_to places_path
   end
 
