@@ -5,32 +5,19 @@ class ContactsController < ApplicationController
     @contacts = Contact.all
   end
 
-
-  def show
-    @contacts = Contact.new
-  end
-
   def new
+    @contact = Contact.new
   end
 
   def create
-    current_user.contacts.create(contact_params)
-    @contacts = Contact.new(contact_params)
-    @contacts.create(contact_params.merge(user: current_user))
-    redirect_to root
-  end
-
-  private
-    def contact_params
-      params.require(:name).permit(:message, :email)
-   
-    end
-
-#end
-
- #
-#@contacts = Contact.new
-#(params[:contact])
-
+    @contact = Contact.new
+    redirect_to places_path
 
   end
+
+  def show
+    @contact = Contact.new
+  end
+
+
+end
