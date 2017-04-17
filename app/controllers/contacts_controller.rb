@@ -1,19 +1,19 @@
 class ContactsController < ApplicationController
 
   def index
-    @contacts = Contact.all
+    @contacts = Contacts.all
   end
 
   def show
-    @contacts = Contact.new
+    @contacts = Contacts.new
   end
 
   def new
-    @contact=Contact.new
+    @contact=Contacts.new
   end
 
   def create
-    Contact.create(contact_params)
+    Contacts.create(contact_params)
     redirect_to places_path
   end
 
