@@ -74,3 +74,6 @@ gem "figaro"
 
 #Gem for image field
 gem 'carrierwave', '~> 1.0'
+
+#To get Amazon S3 to work with Heroku
+gem 'fog'
