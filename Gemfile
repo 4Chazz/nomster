@@ -71,3 +71,6 @@ gem "geocoder"
 
 #Add Figaro to add environment variable 
 gem "figaro"
+
+#Gem for image field
+gem 'carrierwave', '~> 1.0'

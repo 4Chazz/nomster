@@ -142,6 +142,13 @@
   <h1 class="float-left">Photo</h1>
   
 </div>
+  <div class="row">
+  <% @place.photos.each do |photo| %>
+      <%= image_tag photo.picture %>
+      <%= photo.caption %>
+    </div>
+  <% end %>-->
+
 
 
 
