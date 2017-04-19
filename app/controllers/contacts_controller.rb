@@ -6,7 +6,7 @@ class ContactsController < ApplicationController
   end
 
   def show
-    @contacts = Contact.new
+    @contact = Contact.find(params[:id])
   end
 
   def new
@@ -15,12 +15,12 @@ class ContactsController < ApplicationController
 
   def create
     current_user.contacts.create(contact_params)
-    Contact.create(contact_params)
+    
     redirect_to places_path
   end
 
   def contact_params
-    params.require(:name).permit(:email, :message)
+    params.require(:contact).permit(:name, :email, :message)
 
   end
 

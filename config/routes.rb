@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   root 'contacts#index'
-    post '/contacts' => 'contacts#index'
+  
   resources :contacts do
   
   end
