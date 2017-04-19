@@ -56,9 +56,9 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">×</span>
-        </button> -->
+        </button>
         <h4 class="modal-title" id="myModalLabel">Add a comment</h4>
       </div>
 
@@ -67,21 +67,20 @@
           <%= f.input :message %>
           <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
         </div>
-      <div class="modal-footer">
-        <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        
-      </div>
-        <% end %>
-      </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
+
 <div class="col-10 offset-1">
   <h1 class="float-left">Comments</h1>
   
   <!-- Comment Button trigger modal -->
-  <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">
+  <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
     Add a comment
   </button>
 </div>
@@ -94,12 +93,12 @@
         <blockquote>
           <% if comment.humanized_rating.present? %>
             <b><%= comment.humanized_rating %></b> -
-        <% end %>
+          <% end %>
           <%= comment.message %>
-        <small><%= comment.user.email %></small>
+          <small><%= comment.user.email %></small>
         </blockquote>
       </div>
-      <% end %>
+    <% end %>
   </div>
 
 <br />
@@ -141,11 +140,19 @@
   </button>
   
 </div>
+<div class="container-fluid">
   <div class="row">
+    <div class = "rounded mx-auto d-block">
   <% @place.photos.each do |photo| %>
-      <%= image_tag photo.picture %>
-      <%= photo.caption %>
-    </div>
+  <figure>
+      <%= image_tag photo.picture, class:'image-sizing' %>
+  <figcaption class="figure-caption text-center"><%= photo.caption %></figcaption>
+  <% end %>
+  </figure>
+  </div>
+  </div>
+  </div>
+   
  
 
 

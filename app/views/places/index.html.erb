@@ -7,7 +7,10 @@
     <% if place.user.present? %>
       <small><%= place.user.email %></small>
     <% end %>
-  </div>
+  
+    <% if place.photos.present? %>
+      <%= image_tag place.photos.last.picture %>
+    <% end %>
 
   <% if place.comments.present? %>
     <div class="col-12">
@@ -16,14 +19,14 @@
           <b><%= place.comments.last.humanized_rating %></b> -
         <% end %>
 
-          <%= place.comments.last.message %>
+        <%= place.comments.last.message %>
         <small><%= place.comments.last.user.email %></small>
       </blockquote>
     </div>
   
-<% end %>
+  <% end %>
 
-
+  </div>
 
 <% end %>
 <div class="pagination col-10 offset-5">
