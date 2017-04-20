@@ -9,7 +9,9 @@
     <% end %>
   
     <% if place.photos.present? %>
-      <%= image_tag place.photos.last.picture %>
+      <div class="col-12">
+        <%= image_tag place.photos.last.picture, :class => 'img-fluid img-index float right' %>
+      </div>
     <% end %>
 
   <% if place.comments.present? %>
