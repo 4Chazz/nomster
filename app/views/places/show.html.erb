@@ -139,7 +139,7 @@
    <% @place.photos.each do |photo| %>
     <div>
       <blockquote>
-        <%= image_tag photo.picture, class: 'img-fluid' %>
+        <%= image_tag photo.picture, class: 'img-fluid, small-image' %>
         <%= photo.caption %>
       </blockquote>
     </div>
