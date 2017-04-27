@@ -53,6 +53,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap', '~> 4.0.0.alpha6'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
 
 #Pagination attempt
 gem 'kaminari', '~> 0.17.0'
@@ -77,3 +80,6 @@ gem 'carrierwave', '~> 1.0'
 
 #To get Amazon S3 to work with Heroku
 gem 'fog'
+
+#To change pagination to will
+gem 'will_paginate', '~> 3.1.0'

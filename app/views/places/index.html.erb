@@ -39,18 +39,20 @@
   <div class="booyah-box col-10 offset-1">
     <h1><%= link_to place.name, place_path(place) %></h1><br />
     <i><%= place.address %></i><br />
-    <p><%= place.description %></p><br />
+    <p><%= place.description %></p>
 
     <% if place.user.present? %>
       <small><%= place.user.email %></small>
     <% end %>
-  
+    <br />
+    <br />
+
     <% if place.photos.present? %>
-      <div class = "col-12">
+      <!-- <div class = "col-12"> -->
         <%= image_tag place.photos.last.picture, class: 'photo-sizing' %>
-        <br class = 'clear' />
+        <!-- <br class = 'clear' /> -->
         <small><%= place.photos.last.caption %></small>
-      </div>
+      <!-- </div> -->
       
     <% end %>
 
@@ -71,6 +73,11 @@
   </div>
 
 <% end %>
+
+<!-- <div class="pagination">
+  <%= will_paginate @places %>
+</div> -->
+
 <div class="pagination col-10 offset-5">
   <%= paginate @places %>
   
