@@ -48,11 +48,10 @@
     <br />
 
     <% if place.photos.present? %>
-      <!-- <div class = "col-12"> -->
         <%= image_tag place.photos.last.picture, class: 'photo-sizing' %>
-        <!-- <br class = 'clear' /> -->
-        <small><%= place.photos.last.caption %></small>
-      <!-- </div> -->
+        <div class="photocaption">
+          <small><%= place.photos.last.caption %></small>
+        </div>
       
     <% end %>
 
@@ -74,9 +73,6 @@
 
 <% end %>
 
-<!-- <div class="pagination">
-  <%= will_paginate @places %>
-</div> -->
 
 <div class="pagination col-10 offset-5">
   <%= paginate @places %>

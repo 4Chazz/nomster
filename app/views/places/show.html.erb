@@ -154,7 +154,9 @@
     <% @place.photos.each do |photo| %>
     <%= image_tag photo.picture, class: "img-fluid, photo-sizing" %>
     <br />
-    <small><%= photo.caption %></small>
+    <div class="photocaption">
+      <small><%= photo.caption %></small>
+    </div>
     <br />
 
     <% end %>
