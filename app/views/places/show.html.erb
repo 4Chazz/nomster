@@ -152,7 +152,7 @@
     <h1 class="float-left">Photos</h1>
     <div class="clear"></div>
     <% @place.photos.each do |photo| %>
-    <%= image_tag photo.picture, class: "img-fluid, photo-sizing" %>
+    <%= image_tag photo.picture, :class => 'img-fluid' %>
     <br />
     <div class="photocaption">
       <small><%= photo.caption %></small>
