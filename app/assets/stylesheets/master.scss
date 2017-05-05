@@ -97,6 +97,7 @@ blockquote p {
     max-height: 650px;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 0;
 
 }
 
@@ -116,7 +117,6 @@ blockquote p {
 }
 
 
-
 .photo-sizing {
   max-width: 800px;
   height: auto;
@@ -126,6 +126,9 @@ blockquote p {
   min-width: 500px;
   min-height: 500px;
 }
+
+
+
  
 .photocaption {
   text-align: center;
