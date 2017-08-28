@@ -1,24 +1,19 @@
-# README
+# Nomster Web Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Nomster](http://nomster-chastity.herokuapp.com): A Yelp clone integrated with Google Maps and features like user comments, star ratings, image uploading, user authentication, automated email notification messages and admin dashboards.
 
-Things you may want to cover:
+This app powers Nomster located [here](http://nomster-chastity.herokuapp.com)
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+## Software requirements
 
-* Configuration
+- Rails 5.0.0 or higher
 
-* Database creation
+- Ruby 2.3.1 or higher
 
-* Database initialization
+- PostgreSQL 9.5.x or higher
 
-* How to run the test suite
+## Copyright
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+&copy; Copyright 2017 Chastity Lawson. All Rights Reserved.
